@@ -1,7 +1,8 @@
 import { api } from "../../config/axios/apiClient";
-import { GET_PRESENCES, ADD_PRESENCES, EDIT_PRESENCES, ERROR } from "./presence-types";
+import { GET_PRESENCES, //ADD_PRESENCES, EDIT_PRESENCES, 
+	ERROR } from "./presence-types";
 
-export function getPrensences(url) {
+export function getPresences(url) {
 	return (dispatch) => {
 		return api({
 			method: "GET",
@@ -9,10 +10,10 @@ export function getPrensences(url) {
 		})
 			.then((response) => {
 				const {
-					data: { message },
+					data
 				} = response;
 
-				dispatch({type: GET_PRESENCES, payload: message})
+				dispatch({type: GET_PRESENCES, payload: data})
 			})
 			.catch(() => dispatch({type: ERROR, payload: []}));
 	};

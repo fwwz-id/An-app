@@ -1,4 +1,5 @@
-import { GET_PRESENCES, EDIT_PRESENCES, ADD_PRESENCES, ERROR } from "./presence-types";
+import { GET_PRESENCES, //EDIT_PRESENCES, ADD_PRESENCES, 
+    ERROR } from "./presence-types";
 
 const initialState = {
     isLoading: true,
